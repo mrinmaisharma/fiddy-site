@@ -14,10 +14,23 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ['Arial','Helvetica', 'sans-serif', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                primary: "#ECC31F",
+            }
         },
     },
 
-    plugins: [forms, typography],
+    plugins: [forms, typography, require("daisyui")],
+    daisyui: {
+        styled: true,
+        themes: false,
+        base: true,
+        utils: true,
+        logs: true,
+        rtl: false,
+        prefix: "du-",
+        darkTheme: "dark",
+    },
 };

@@ -13,8 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/price-estimator/kitchen', function () {
+    return view('fiddy.kitchen-estimator');
+});
+Route::get('/price-estimator/wardrobe', function () {
+    return view('fiddy.wardrobe-estimator');
+});
+Route::get('/price-estimator/interior', function () {
+    return view('fiddy.interior-estimator');
 });
 
 Route::middleware([

@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+    display: none;
+}
+
+.image-radio-container {
+    input[type="radio"]:checked + label > img {
+        border-color: #F5C93C !important;
+    }
+}
+
+input:disabled {
+    background-color: #eee !important;
+}
