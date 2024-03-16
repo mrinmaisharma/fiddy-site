@@ -66,6 +66,7 @@ class KitchenEstimatorForm extends Component
             ]);
         }
         $estimate=((($this->length_a * $this->breadth_a) + ($this->length_b * $this->breadth_b) + ($this->length_c * $this->breadth_c)) * 1.75 * ($this->finish_type == 'acrylic' ? 1750 : 1625)) + 75000;
+        $estimate = $estimate * 1.18;
         $fmt = new NumberFormatter( 'en_IN', NumberFormatter::CURRENCY );
         FiddyKitchenQuery::create([
             'name'=>$this->name,

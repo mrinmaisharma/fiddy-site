@@ -17,6 +17,7 @@
         <div class="grid grid-cols-2 sm:grid-cols-4  w-full gap-5">
             <x-shared.image-radio id="finish_type_acrylic" name="finish_type" src="{{asset('images/fiddy/kitchen/acrylic.png')}}" wire:model.live="finish_type" value="acrylic"/>
             <x-shared.image-radio id="finish_type_laminate" name="finish_type" src="{{asset('images/fiddy/kitchen/laminate.png')}}" wire:model.live="finish_type" value="laminate"/>
+            <x-shared.image-radio id="finish_type_pu" name="finish_type" src="{{asset('images/fiddy/kitchen/pu.png')}}" wire:model.live="finish_type" value="PU"/>
         </div>
         <div>
             <x-input-error for="finish_type" class="mt-2" />
@@ -117,7 +118,9 @@
             </div>
         </div>
         <p class="text-center mt-5">
-            Your total estimate is: <strong>{{$estimate}}</strong>
+            Your total estimate is: <strong>{{$estimate}} (incl. GST)</strong>
+            <br/>
+            <span class="italic">* Terms and Conditions Apply</span>
         </p>
         @endif
     @endif
