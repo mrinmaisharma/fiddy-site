@@ -13,6 +13,14 @@
         <div>
             <x-input-error for="kitchen_type" class="mt-2" />
         </div>
+        <p class="mb-5 font-bold">Please select finish type:</p>
+        <div class="grid grid-cols-2 sm:grid-cols-4  w-full gap-5">
+            <x-shared.image-radio id="finish_type_acryllic" name="finish_type" src="{{asset('images/fiddy/kitchen/acryllic.png')}}" wire:model.live="finish_type" value="acryllic"/>
+            <x-shared.image-radio id="finish_type_laminate" name="finish_type" src="{{asset('images/fiddy/kitchen/laminate.png')}}" wire:model.live="finish_type" value="laminate"/>
+        </div>
+        <div>
+            <x-input-error for="finish_type" class="mt-2" />
+        </div>
         @if ($kitchen_type!='0')
         <p class="mt-5 mb-2 font-bold">Enter kitchen dimensions:</p>
         @endif
@@ -34,15 +42,15 @@
                 <x-input-error for="length_{{strtolower($s)}}" class="mt-2" />
             </div>
             <div class="flex flex-col gap-1">
-                <label for="breadth{{$s}}" class="text-sm">Breadth (ft)</label>
+                <label for="breadth{{$s}}" class="text-sm">Slab Depth (ft)</label>
                 <x-shared.text-input class="text-sm" id="breadth{{$s}}" type="number" disabled required step="0.1" min="1" name="breadth{{$s}}" wire:model="breadth_{{strtolower($s)}}" placeholder="Breadth" />
                 <x-input-error for="breadth_{{strtolower($s)}}" class="mt-2" />
             </div>
-            <div class="flex flex-col gap-1">
+            {{-- <div class="flex flex-col gap-1">
                 <label for="height{{$s}}" class="text-sm">Height (ft)</label>
                 <x-shared.text-input class="text-sm" id="length{{$s}}" type="number" disabled required step="0.1" min="1" name="height{{$s}}" wire:model="height_{{strtolower($s)}}" placeholder="Height" />
                 <x-input-error for="height_{{strtolower($s)}}" class="mt-2" />
-            </div>
+            </div> --}}
         </div>
         @endforeach
         <div class="text-center my-5">
@@ -81,7 +89,7 @@
         <div class="flex flex-col gap-1 items-center">
             <div class="flex gap-1 items-start">
                 <span class="font-semibold">Shape:</span>
-                <span>{{ucwords($kitchen_type)}}</span>
+                <span>{{ucwords($kitchen_type)}} ({{ucwords($finish_type)}})</span>
             </div>
             <div class="px-5 sm:px-0">
                 @php
@@ -92,18 +100,18 @@
             <div class="flex gap-3 text-sm flex-wrap">
                 <div class="flex flex-col gap-1">
                     <span class="underline underline-offset-2">Side A</span>
-                    <span>({{$length_a}}x{{$breadth_a}}x{{$height_a}})</span>
+                    <span>({{$length_a}}x{{$breadth_a}})</span>
                 </div>
                 @if ($this->kitchen_type!='straight')
                     <div class="flex flex-col gap-1">
                         <span class="underline underline-offset-2">Side B</span> 
-                        <span>({{$length_b}}x{{$breadth_b}}x{{$height_b}})</span>
+                        <span>({{$length_b}}x{{$breadth_b}})</span>
                     </div>
                 @endif
                 @if ($kitchen_type=='u-shaped')
                     <div class="flex flex-col gap-1">
                         <span class="underline underline-offset-2">Side C</span>
-                        <span>({{$length_c}}x{{$breadth_c}}x{{$height_c}})</span>
+                        <span>({{$length_c}}x{{$breadth_c}})</span>
                     </div>
                 @endif
             </div>

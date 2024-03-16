@@ -10,6 +10,7 @@ use NumberFormatter;
 class KitchenEstimatorForm extends Component
 {
     public $kitchen_type=0;
+    public $finish_type;
 
     public $length_a=0;
     public $breadth_a=2.5;
@@ -33,6 +34,9 @@ class KitchenEstimatorForm extends Component
     public $estimate;
 
     public function openForm() {
+        $this->validate([
+            'finish_type'=>'required',
+        ]);
         if(empty($this->kitchen_type) && $this->kitchen_type=='0') {
             throw ValidationException::withMessages(['kitchen_type'=>"Please select kitchen type"]);
         }
@@ -61,13 +65,14 @@ class KitchenEstimatorForm extends Component
                 'height_c'=>'required|numeric|gte:1',
             ]);
         }
-        $estimate=((($this->length_a * $this->breadth_a * $this->height_a) + ($this->length_b * $this->breadth_b * $this->height_b) + ($this->length_c * $this->breadth_c * $this->height_c)) * 1.75 * 1750) + 75000;
+        $estimate=((($this->length_a * $this->breadth_a) + ($this->length_b * $this->breadth_b) + ($this->length_c * $this->breadth_c)) * 1.75 * ($this->finish_type == 'acryllic' ? 1750 : 1625)) + 75000;
         $fmt = new NumberFormatter( 'en_IN', NumberFormatter::CURRENCY );
         FiddyKitchenQuery::create([
             'name'=>$this->name,
             'email'=>$this->email,
             'phone_number'=>$this->phone_number,
             'shape'=>$this->kitchen_type,
+            'finish'=>$this->finish_type,
             'a_length'=>$this->length_a,
             'a_breadth'=>$this->breadth_a,
             'a_height'=>$this->height_a,
