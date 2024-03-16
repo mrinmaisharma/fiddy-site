@@ -15,7 +15,7 @@
         </div>
         <p class="mb-5 font-bold">Please select finish type:</p>
         <div class="grid grid-cols-2 sm:grid-cols-4  w-full gap-5">
-            <x-shared.image-radio id="finish_type_acryllic" name="finish_type" src="{{asset('images/fiddy/kitchen/acryllic.png')}}" wire:model.live="finish_type" value="acryllic"/>
+            <x-shared.image-radio id="finish_type_acrylic" name="finish_type" src="{{asset('images/fiddy/kitchen/acrylic.png')}}" wire:model.live="finish_type" value="acrylic"/>
             <x-shared.image-radio id="finish_type_laminate" name="finish_type" src="{{asset('images/fiddy/kitchen/laminate.png')}}" wire:model.live="finish_type" value="laminate"/>
         </div>
         <div>
