@@ -84,12 +84,11 @@ class KitchenEstimatorForm extends Component
             'c_breadth'=>$this->breadth_c,
             'c_height'=>$this->height_c,
             'total_estimate'=>round($estimate),
-            'shared_estimate'=>"Your total estimate is: ".$fmt->formatCurrency(round($estimate), "INR")
+            'shared_estimate'=>"Your total estimate is: ".$fmt->formatCurrency(round($estimate), "INR (incl. GST)")
         ]);
         $this->dispatch('notify', message: "Query submitted successfully.");
         $this->estimate = $fmt->formatCurrency(round($estimate), "INR");
         $this->saved=true;
-        $this->dispatch('openModal',modalId: 'leadModal');
     }
 
     public function render()

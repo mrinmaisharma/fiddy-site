@@ -2,12 +2,12 @@
     @section('title', 'Kitchen Estimator')
 
     
-    {{-- <div class="flex flex-col items-center gap-1">
+    <div class="flex flex-col items-center gap-1">
         <h1 class="text-3xl font-bold text-gray-800 dark:text-gray-800 text-center">
             Wardrobe Price Estimator
         </h1>
         <div class="h-1 bg-primary w-16"></div>
-    </div> --}}
+    </div>
 
     <div class="mt-10 px-2 sm:px-5 pb-32" id="formContainer">
         @livewire('forms.wardrobe-estimator-form')
