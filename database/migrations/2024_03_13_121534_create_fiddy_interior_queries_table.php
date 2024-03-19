@@ -19,22 +19,24 @@ return new class extends Migration
             $table->text('message')->nullable();
             $table->string('type')->nullable();
             $table->integer('bedrooms')->nullable();
-            $table->json('bedroom_lengths')->nullable();
-            $table->json('bedroom_breadths')->nullable();
             $table->integer('bathrooms')->nullable();
-            $table->json('bathroom_lengths')->nullable();
-            $table->json('bathroom_breadths')->nullable();
             $table->integer('kitchens')->nullable();
-            $table->json('kitchen_lengths')->nullable();
-            $table->json('kitchen_breadths')->nullable();
             $table->integer('livings')->nullable();
-            $table->json('living_lengths')->nullable();
-            $table->json('living_breadths')->nullable();
             $table->integer('dinings')->nullable();
-            $table->json('dining_lengths')->nullable();
-            $table->json('dining_breadths')->nullable();
             $table->decimal('total_estimate',10,2)->nullable();
             $table->text('shared_estimate')->nullable();
+
+            $table->json('bedroom_lengths')->nullable(); //removed
+            $table->json('bedroom_breadths')->nullable(); //removed
+            $table->json('bathroom_lengths')->nullable(); //removed
+            $table->json('bathroom_breadths')->nullable(); //removed
+            $table->json('kitchen_lengths')->nullable(); //removed
+            $table->json('kitchen_breadths')->nullable(); //removed
+            $table->json('living_lengths')->nullable(); //removed
+            $table->json('living_breadths')->nullable(); //removed
+            $table->json('dining_lengths')->nullable(); //removed
+            $table->json('dining_breadths')->nullable(); //removed
+            
             $table->timestamps();
         });
     }

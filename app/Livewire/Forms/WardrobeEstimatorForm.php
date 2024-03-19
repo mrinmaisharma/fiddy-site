@@ -61,7 +61,7 @@ class WardrobeEstimatorForm extends Component
             'width'=>$this->width,
             'height'=>$this->height,
             'total_estimate'=>round($estimate),
-            'shared_estimate'=>"Your total estimate is: ".$fmt->formatCurrency(round($estimate), "INR (incl. GST)")
+            'shared_estimate'=>"Your total estimate is: ".$fmt->formatCurrency(round($estimate), "INR")
         ]);
         $this->dispatch('notify', message: "Query submitted successfully.");
         $this->estimate = $fmt->formatCurrency(round($estimate), "INR");
