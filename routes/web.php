@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return redirect("https://www.fiddy.in");
-});
+//Route::get('/', function () {
+//  return redirect("https://www.fiddy.in");
+//});
 Route::get('/price-estimator/kitchen', function () {
     return view('fiddy.kitchen-estimator');
 });
@@ -24,6 +24,9 @@ Route::get('/price-estimator/wardrobe', function () {
 });
 Route::get('/price-estimator/interior', function () {
     return view('fiddy.interior-estimator');
+});
+Route::get('/studio', function () {
+    return view('fiddy.about-us');
 });
 
 Route::middleware([
