@@ -16,18 +16,12 @@ use Illuminate\Support\Facades\Route;
 //Route::get('/', function () {
 //  return redirect("https://www.fiddy.in");
 //});
-Route::get('/price-estimator/kitchen', function () {
-    return view('fiddy.kitchen-estimator');
-});
-Route::get('/price-estimator/wardrobe', function () {
-    return view('fiddy.wardrobe-estimator');
-});
-Route::get('/price-estimator/interior', function () {
-    return view('fiddy.interior-estimator');
-});
-Route::get('/studio', function () {
-    return view('fiddy.about-us');
-});
+Route::get('/price-estimator/kitchen', 'App\Http\Controllers\HomeController@kitchen_estimator');
+Route::get('/price-estimator/wardrobe', 'App\Http\Controllers\HomeController@wardrobe_estimator');
+Route::get('/price-estimator/interior', 'App\Http\Controllers\HomeController@interior_estimator');
+Route::get('/studio', 'App\Http\Controllers\HomeController@about_us');
+Route::get('/products', 'App\Http\Controllers\HomeController@products');
+Route::get('/career', 'App\Http\Controllers\HomeController@career');
 
 Route::middleware([
     'auth:sanctum',
