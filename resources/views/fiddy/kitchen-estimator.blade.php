@@ -9,7 +9,7 @@
         <div class="h-1 bg-primary w-16"></div>
     </div>
 
-    <div class="mt-10 px-2 sm:px-5 pb-32" id="formContainer">
+    <div class="mt-10 xl:px-72 sm:px-5 pb-32 flex items-center justify-center" id="formContainer">
         @livewire('forms.kitchen-estimator-form')
     </div>
 

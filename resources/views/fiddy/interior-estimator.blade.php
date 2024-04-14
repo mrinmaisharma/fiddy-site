@@ -9,7 +9,7 @@
         <div class="h-1 bg-primary w-16"></div>
     </div>
 
-    <div class="mt-10 px-2 sm:px-5 pb-32" id="formContainer">
+    <div class="mt-10 px-2 sm:px-5 pb-32 xl:px-64" id="formContainer">
         @livewire('forms.interior-estimator-form')
     </div>
 
