@@ -22,6 +22,7 @@ Route::get('/price-estimator/interior', 'App\Http\Controllers\HomeController@int
 Route::get('/studio', 'App\Http\Controllers\HomeController@about_us');
 Route::get('/products', 'App\Http\Controllers\HomeController@products');
 Route::get('/career', 'App\Http\Controllers\HomeController@career');
+Route::get('/contact', 'App\Http\Controllers\HomeController@contact');
 
 Route::middleware([
     'auth:sanctum',

@@ -29,6 +29,10 @@ class HomeController extends Controller
     {
         return view('fiddy.career');
     }
+    public function contact()
+    {
+        return view('fiddy.contact-us');
+    }
     public function kitchen_estimator()
     {
         return view('fiddy.kitchen-estimator');
