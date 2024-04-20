@@ -10,9 +10,10 @@
                     <h1 class="text-white text-2xl font-bold">Want to start your career ?</h1>
                     <p class="text-white text-center text-lg mt-4">If you are interested in making a career in modular
                         <br />kitchen
-                        industry, FIDDY will be the Best for You.</p>
+                        industry, FIDDY will be the Best for You.
+                    </p>
                     <button class="bg-[#F1C63A] rounded-lg mt-4">
-                        <div class="flex lg:flex-col items-center px-5 py-2">
+                        <div class="flex lg:flex-col sm:flex-row gap-1 items-center px-5 py-2">
                             <span class="text-sm">View</span>
                             <span class="text-sm">Openings</span>
                         </div>
@@ -26,14 +27,16 @@
             </h1>
             <div class="h-1 bg-primary w-20"></div>
         </div>
-        <div class="flex flex-wrap sm:mt-12 mt-6 gap-4">
+        <div class="flex flex-wrap sm:mt-12 mt-6 sm:gap-4 gap-2">
             <div class="flex flex-col gap-4 items-center sm:flex-row sm:items-start sm:gap-4">
                 <div class="mt-12 sm:flex sm:flex-col sm:items-center">
                     <img src="{{ asset('images/fiddy/career/feature-1-career.png') }}" class="sm:w-20 w-28" />
                 </div>
                 <div class="flex items-center flex-col gap-2 w-full sm:w-56">
                     <h2 class="font-bold text-lg">Improve Experience</h2>
-                    <p class="text-sm text-center sm:text-left">We are committed to improving the culinary experience of
+                    <p class="sm:text-sm text-xs sm:px-0 px-10 text-center sm:text-left">We are committed to improving
+                        the culinary
+                        experience of
                         modular
                         kitchen
                         experience, ensuring that each design not only transforms spaces but enhances the joy of cooking
@@ -46,7 +49,8 @@
                 </div>
                 <div class="flex items-center flex-col gap-2 w-full sm:w-56">
                     <h2 class="font-bold text-lg">Our Strong Values</h2>
-                    <p class="text-sm text-center sm:text-left"> We are dedicated to integrity, quality craftsmanship,
+                    <p class="sm:text-sm text-xs sm:px-0 px-10 text-center sm:text-left"> We are dedicated to integrity,
+                        quality craftsmanship,
                         and customer satisfaction,
                         ensuring that each kitchen we create reflects a commitment to excellence and enduring style.</p>
                 </div>
@@ -57,7 +61,8 @@
                 </div>
                 <div class="flex items-center flex-col gap-2 w-full sm:w-56">
                     <h2 class="font-bold text-lg">Our Open Culture</h2>
-                    <p class="text-sm text-center sm:text-left">We foster a dynamic environment that values creativity,
+                    <p class="sm:text-sm text-xs sm:px-0 px-10 text-center sm:text-left">We foster a dynamic environment
+                        that values creativity,
                         innovation, and a shared
                         commitment to crafting spaces that inspire connection and functionality.</p>
                 </div>
