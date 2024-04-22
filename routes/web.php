@@ -23,6 +23,9 @@ Route::get('/studio', 'App\Http\Controllers\HomeController@about_us');
 Route::get('/products', 'App\Http\Controllers\HomeController@products');
 Route::get('/career', 'App\Http\Controllers\HomeController@career');
 Route::get('/contact', 'App\Http\Controllers\HomeController@contact');
+Route::get('/jobs', 'App\Http\Controllers\HomeController@jobs');
+Route::get('/jobs/job-details', 'App\Http\Controllers\HomeController@job_details');
+
 
 Route::middleware([
     'auth:sanctum',
