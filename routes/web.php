@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 //Route::get('/', function () {
 //  return redirect("https://www.fiddy.in");
 //});
+Route::get('/', 'App\Http\Controllers\HomeController@home');
 Route::get('/price-estimator/kitchen', 'App\Http\Controllers\HomeController@kitchen_estimator');
 Route::get('/price-estimator/wardrobe', 'App\Http\Controllers\HomeController@wardrobe_estimator');
 Route::get('/price-estimator/interior', 'App\Http\Controllers\HomeController@interior_estimator');

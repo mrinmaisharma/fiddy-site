@@ -25,6 +25,11 @@ class HomeController extends Controller
     {
         return view('fiddy.about-us');
     }
+
+    public function home(){
+        return view('fiddy.home');
+    }
+    
     public function career()
     {
         return view('fiddy.career');
