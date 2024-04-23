@@ -24,7 +24,7 @@
     
     <div class="font-sans text-gray-900 antialiased w-full h-full">
         @include('includes.guest.navigation')
-        <main class="relative h-100 min-h-screen xl:px-0 md:px-14 px-5 py-14 mx-auto" style="overflow-x:hidden">
+        <main class="relative h-100 min-h-screen xl:px-0" style="overflow-x:hidden">
             {{ $slot }}
         </main>
         @include('includes.guest.footer')
