@@ -13,6 +13,10 @@ class WardrobeSubmissionList extends Component
         $this->item = FiddyWardrobeQuery::where("id", $id)->first();
         $this->dispatch("toggleModal");
     }
+    public function closeModal()
+    {
+        $this->dispatch('closeModal');
+    }
     public function render()
     {
         $data = FiddyWardrobeQuery::all();

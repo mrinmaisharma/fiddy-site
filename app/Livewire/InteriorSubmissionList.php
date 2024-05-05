@@ -13,6 +13,10 @@ class InteriorSubmissionList extends Component
         $this->item = FiddyInteriorQuery::where("id", $id)->first();
         $this->dispatch("toggleModal");
     }
+    public function closeModal()
+    {
+        $this->dispatch('closeModal');
+    }
     public function render()
     {
         $data = FiddyInteriorQuery::all();
