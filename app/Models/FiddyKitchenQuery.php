@@ -15,7 +15,6 @@ class FiddyKitchenQuery extends Model
         'phone_number',
         'message',
         'shape',
-        'finish_type',
         'a_length',
         'a_breadth',
         'a_height',
@@ -27,5 +26,6 @@ class FiddyKitchenQuery extends Model
         'c_height',
         'total_estimate',
         'shared_estimate',
+        'finish_type',
     ];
 }

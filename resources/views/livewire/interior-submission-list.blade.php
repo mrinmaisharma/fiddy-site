@@ -7,8 +7,8 @@
                 <th class="px-10">Name</th>
                 <th class="px-10">Email</th>
                 <th class="px-8">Phone</th>
-                <th class="px-4">Wardrobe Type</th>
-                <th class="px-4">Finish Type</th>
+                <th class="px-4">House/Apartment Type</th>
+
             </tr>
         </thead>
         <tbody class="">
@@ -18,8 +18,8 @@
                     <td>{{ $row->name }}</td>
                     <td>{{ $row->email }}</td>
                     <td>{{ $row->phone_number }}</td>
-                    <td>{{ $row->wardrobe_type }}</td>
-                    <td>{{ $row->finish_type }}</td>
+                    <td>{{ $row->type }}</td>
+
                 </tr>
             @endforeach
         </tbody>
@@ -47,29 +47,29 @@
                                 <h1 class="text-lg font-medium mb-2">Details</h1>
                                 <div class="flex flex-col gap-1 items-center">
                                     <div class="flex gap-1 items-start">
-                                        <span class="font-semibold">Wardrobe:</span>
-                                        <span>{{ ucwords($item->wardrobe_type) }}</span>
+                                        <span class="font-semibold">House/Apartment Type:</span>
+                                        <span>{{ ucwords($item->type) }}</span>
                                     </div>
-                                    <div class="flex gap-1 items-start">
-                                        <span class="font-semibold">Finish:</span>
-                                        <span>{{ ucwords($item->finish_type) }}</span>
-                                    </div>
-                                    <div class="px-5 sm:px-0">
-                                        @php
-                                            $src = "images/fiddy/wardrobe/$item->wardrobe_type.png";
-                                        @endphp
-                                        <img src="{{ asset($src) }}"
-                                            class="sm:h-44 cursor-pointer min-h-10 min-w-10 w-full resize object-cover group-hover:border-gray-700 border-2 border-transparent" />
-                                    </div>
-                                    <div class="flex gap-5 text-sm flex-wrap">
+                                    <div class="flex gap-5 text-sm flex-wrap items-center justify-center mt-2">
                                         <div class="flex flex-col gap-1">
-                                            <span class="underline underline-offset-2">Width:</span>
-                                            <span>{{ $item->width }} ft</span>
+                                            <span class="underline underline-offset-2">No. of Bedrooms:</span>
+                                            <span class="text-center">{{ $item->bedrooms }}</span>
                                         </div>
-
                                         <div class="flex flex-col gap-1">
-                                            <span class="underline underline-offset-2">Height:</span>
-                                            <span>{{ $item->height }} ft</span>
+                                            <span class="underline underline-offset-2">No. of Living Rooms:</span>
+                                            <span class="text-center">{{ $item->bathrooms }}</span>
+                                        </div>
+                                        <div class="flex flex-col gap-1">
+                                            <span class="underline underline-offset-2">No. of Kitchens:</span>
+                                            <span class="text-center">{{ $item->kitchens }}</span>
+                                        </div>
+                                        <div class="flex flex-col gap-1">
+                                            <span class="underline underline-offset-2">No. of Dinings:</span>
+                                            <span class="text-center">{{ $item->livings }}</span>
+                                        </div>
+                                        <div class="flex flex-col gap-1">
+                                            <span class="underline underline-offset-2">No. of Bathrooms:</span>
+                                            <span class="text-center">{{ $item->dinings }}</span>
                                         </div>
 
                                     </div>

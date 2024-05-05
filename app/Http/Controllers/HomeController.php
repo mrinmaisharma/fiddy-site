@@ -69,4 +69,8 @@ class HomeController extends Controller
     {
         return view('manage.manage-wardrobe-submissions');
     }
+    public function manage_interior_submissions()
+    {
+        return view('manage.manage-interior-submissions');
+    }
 }

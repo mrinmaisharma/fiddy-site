@@ -63,19 +63,20 @@
                                     </div>
                                     <div class="flex gap-5 text-sm flex-wrap">
                                         <div class="flex flex-col gap-1">
-                                            <span class="underline underline-offset-2">Side A</span>
-                                            <span>({{ $item->length_a }}x{{ $item->breadth_a }})</span>
+                                            <span class="underline underline-offset-2 text-center">Side A</span>
+                                            <span class="">({{ $item->a_length }} x
+                                                {{ $item->a_breadth }})</span>
                                         </div>
                                         @if ($item->shape != 'straight')
                                             <div class="flex flex-col gap-1">
-                                                <span class="underline underline-offset-2">Side B</span>
-                                                <span>({{ $item->length_b }}x{{ $item->breadth_b }})</span>
+                                                <span class="underline underline-offset-2 text-center">Side B</span>
+                                                <span>({{ $item->b_length }} x {{ $item->b_breadth }})</span>
                                             </div>
                                         @endif
                                         @if ($item->shape == 'u-shaped')
                                             <div class="flex flex-col gap-1">
-                                                <span class="underline underline-offset-2">Side C</span>
-                                                <span>({{ $item->length_c }}x{{ $item->breadth_c }})</span>
+                                                <span class="underline underline-offset-2 text-center">Side C</span>
+                                                <span>({{ $item->c_length }} x {{ $item->c_breadth }})</span>
                                             </div>
                                         @endif
                                     </div>

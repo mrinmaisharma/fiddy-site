@@ -28,6 +28,7 @@ Route::get('/jobs', 'App\Http\Controllers\HomeController@jobs');
 Route::get('/jobs/job-details', 'App\Http\Controllers\HomeController@job_details');
 Route::get('/manage-kitchen-submissions', 'App\Http\Controllers\HomeController@manage_kitchen_submissions');
 Route::get('/manage-wardrobe-submissions', 'App\Http\Controllers\HomeController@manage_wardrobe_submissions');
+Route::get('/manage-interior-submissions', 'App\Http\Controllers\HomeController@manage_interior_submissions');
 
 
 Route::middleware([
