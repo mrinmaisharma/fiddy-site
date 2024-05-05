@@ -26,6 +26,13 @@ Route::get('/career', 'App\Http\Controllers\HomeController@career');
 Route::get('/contact', 'App\Http\Controllers\HomeController@contact');
 Route::get('/jobs', 'App\Http\Controllers\HomeController@jobs');
 Route::get('/jobs/job-details', 'App\Http\Controllers\HomeController@job_details');
+Route::get('/manage-products', 'App\Http\Controllers\ProductController@manageProducts');
+
+
+Route::prefix('dashboard')
+    ->group(function () {
+        Route::resource('products', 'App\Http\Controllers\ProductController');
+    });
 
 
 Route::middleware([

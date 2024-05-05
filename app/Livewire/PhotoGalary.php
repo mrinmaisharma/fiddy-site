@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use Livewire\Component;
+use App\Models\Product;
 
 class PhotoGalary extends Component
 {
@@ -10,15 +11,15 @@ class PhotoGalary extends Component
 
     public function mount()
     {
-        $imageDirectory = public_path('images/fiddy/products');
-        $files = scandir($imageDirectory);
+        // Fetch product images from the database
+        $products = Product::all();
+        
+        // Initialize an empty array to store image URLs
+        $this->images = [];
 
-        foreach ($files as $file) {
-            if ($file === '.' || $file === '..') {
-                continue;
-            }
-            $imageUrl = asset('images/fiddy/products/' . $file);
-            $this->images[] = $imageUrl;
+        // Loop through the products and extract image URLs
+        foreach ($products as $product) {
+            $this->images[] = asset('storage/' . $product->image_path);
         }
     }
     public function render()

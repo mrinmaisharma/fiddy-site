@@ -25,10 +25,8 @@
 </style>
 
 <div class="my-20">
-    <!-- Background overlay -->
     <div class="modal-overlay" id="modalOverlay"></div>
 
-    <!-- Modal content -->
     <dialog id="myModal" class="modal bg-transparent">
         <div class="modal-box flex justify-center items-center gap-64" >
             <button class="text-center" onclick="navigateModal('previous')">
@@ -48,7 +46,6 @@
         </div>
     </dialog>
 
-    <!-- Your existing buttons and image grid -->
     <div class="flex flex-wrap gap-2 sm:gap-5 mb-5 mt-10 justify-center">
         <button id="all" class="py-2 px-4 bg-black text-white focus:outline-none">ALL</button>
         <button id="furniture" class="py-2 px-4 focus:outline-none">KITCHENS</button>
@@ -73,14 +70,14 @@
     const myModal = document.getElementById('myModal');
     const modalImage = document.getElementById('modalImage');
     const modalOverlay = document.getElementById('modalOverlay');
-    const images = {!! json_encode($images) !!}; // Convert PHP array to JavaScript array
+    const images = {!! json_encode($images) !!};
     let currentIndex = 0;
 
     function openModal(index) {
         currentIndex = index;
         modalImage.style.backgroundImage = `url('${images[currentIndex]}')`;
         myModal.showModal();
-        modalOverlay.style.display = 'block'; // Show the background overlay
+        modalOverlay.style.display = 'block';
     }
 
     function navigateModal(direction) {
@@ -101,7 +98,7 @@
 
     function closeModal() {
         myModal.close();
-        modalOverlay.style.display = 'none'; // Hide the background overlay when modal is closed
+        modalOverlay.style.display = 'none';
     }
 </script>
 @endpush
