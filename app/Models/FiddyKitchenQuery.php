@@ -15,6 +15,7 @@ class FiddyKitchenQuery extends Model
         'phone_number',
         'message',
         'shape',
+        'finish_type',
         'a_length',
         'a_breadth',
         'a_height',

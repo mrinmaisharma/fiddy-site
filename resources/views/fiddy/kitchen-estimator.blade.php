@@ -1,8 +1,8 @@
 <x-guest-layout>
     @section('title', 'Kitchen Estimator')
 
-    
-    <div class="flex flex-col items-center gap-1">
+
+    <div class="flex flex-col items-center gap-1 mt-8">
         <h1 class="text-3xl font-bold text-gray-800 dark:text-gray-800 text-center">
             Kitchen Price Estimator
         </h1>
@@ -15,33 +15,40 @@
 
     @push('scripts')
         <script>
-
             function openModal(modalId) {
-                setTimeout(()=>{document.getElementById(modalId).showModal();},100);
+                setTimeout(() => {
+                    document.getElementById(modalId).showModal();
+                }, 100);
             }
+
             function closeModal(modalId) {
-                setTimeout(()=>{document.getElementById(modalId).close();},100);
+                setTimeout(() => {
+                    document.getElementById(modalId).close();
+                }, 100);
             }
 
-            window.closeModal=closeModal;
+            window.closeModal = closeModal;
 
-            window.addEventListener("openModal", event=> {
+            window.addEventListener("openModal", event => {
                 const modalId = event.detail.modalId;
                 openModal(modalId);
             });
 
-            window.addEventListener("closeModal", event=> {
+            window.addEventListener("closeModal", event => {
                 const modalId = event.detail.modalId;
                 closeModal(modalId);
             });
 
-            function resizeIframe () {
+            function resizeIframe() {
                 const height = document.getElementById('formContainer').offsetHeight;
 
                 console.log(height);
 
                 //  Send a message to the parent window to resize the iframe
-                window.parent.postMessage({ resizeIframe: true, height: height+200 }, '*');
+                window.parent.postMessage({
+                    resizeIframe: true,
+                    height: height + 200
+                }, '*');
             }
             // window.onload = resizeIframe;
 
