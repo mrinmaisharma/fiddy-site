@@ -26,5 +26,6 @@ class FiddyKitchenQuery extends Model
         'c_height',
         'total_estimate',
         'shared_estimate',
+        'finish_type',
     ];
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\FiddyKitchenQuery;
 use Illuminate\Http\Request;
 use App\Models\Product;
 
@@ -28,10 +29,11 @@ class HomeController extends Controller
         return view('fiddy.about-us');
     }
 
-    public function home(){
+    public function home()
+    {
         return view('fiddy.home');
     }
-    
+
     public function career()
     {
         return view('fiddy.career');
@@ -59,5 +61,18 @@ class HomeController extends Controller
     public function interior_estimator()
     {
         return view('fiddy.interior-estimator');
+    }
+    public function manage_kitchen_submissions()
+    {
+
+        return view('manage.manage-kitchen-submissions');
+    }
+    public function manage_wardrobe_submissions()
+    {
+        return view('manage.manage-wardrobe-submissions');
+    }
+    public function manage_interior_submissions()
+    {
+        return view('manage.manage-interior-submissions');
     }
 }
