@@ -4,23 +4,25 @@ namespace App\Http\Controllers;
 
 use App\Models\FiddyKitchenQuery;
 use Illuminate\Http\Request;
+use App\Models\Product;
 
 class HomeController extends Controller
 {
     public function products()
     {
-        $images = [];
-        $imageDirectory = public_path('images/fiddy/products');
-        $files = scandir($imageDirectory);
+        // Fetch product images from the database
+        // $products = Product::all();
+        
+        // // Prepare an array to store image URLs
+        // $images = [];
 
-        foreach ($files as $file) {
-            if ($file === '.' || $file === '..') {
-                continue;
-            }
-            $imageUrl = asset('images/fiddy/products/' . $file);
-            $images[] = $imageUrl;
-        }
-        return view('fiddy.our-products', ['imageUrls' => $images]);
+        // // Loop through the products and extract image URLs
+        // foreach ($products as $product) {
+        //     $images[] = asset($product->image_path);
+        // }
+
+        // Pass the image URLs to the view
+        return view('fiddy.our-products');
     }
     public function about_us()
     {

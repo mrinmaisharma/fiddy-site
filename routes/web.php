@@ -29,8 +29,11 @@ Route::get('/jobs/job-details', 'App\Http\Controllers\HomeController@job_details
 Route::get('/manage-kitchen-submissions', 'App\Http\Controllers\HomeController@manage_kitchen_submissions');
 Route::get('/manage-wardrobe-submissions', 'App\Http\Controllers\HomeController@manage_wardrobe_submissions');
 Route::get('/manage-interior-submissions', 'App\Http\Controllers\HomeController@manage_interior_submissions');
-
-
+Route::get('/manage-products', 'App\Http\Controllers\ProductController@manageProducts');
+Route::prefix('dashboard')
+    ->group(function () {
+        Route::resource('products', 'App\Http\Controllers\ProductController');
+    });
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
