@@ -1,55 +1,49 @@
-<div class="mt-4 flex flex-col gap-4">
-    <form wire:submit.prevent="submit">
+<div class="mt-4">
+    <x-banner />
+    <form wire:submit.prevent="submit" class="flex flex-col gap-1">
         <div>
-            <input type="text" id="name" wire:model="name" placeholder="Enter your Name" style="font-size: 14px;"
-                class="w-full bg-[#FAFAFA] border-[#EAEAEA]">
+            <x-shared.text-input type="text" id="name" wire:model="name" placeholder="Enter your Name" />
+            <x-input-error for="name" class="mt-2" />
         </div>
         <div class="mt-2">
-            <input type="email" id="email" wire:model="email" placeholder="Enter your Email"
-                style="font-size: 14px;" class="w-full bg-[#FAFAFA] border-[#EAEAEA]">
+            <x-shared.text-input type="email" id="email" wire:model="email" placeholder="Enter your Email" />
+            <x-input-error for="email" class="mt-2" />
         </div>
         <div class="mt-2">
-            <input type="tel" id="phone" wire:model="phone" placeholder="Enter your Phone Number"
-                style="font-size: 14px;" class="w-full bg-[#FAFAFA] border-[#EAEAEA]">
+            <x-shared.text-input type="tel" id="phone" wire:model="phone"
+                placeholder="Enter your Phone Number" />
+            <x-input-error for="phone" class="mt-2" />
         </div>
-        <div class="flex flex-col gap-4 mt-2">
-            <div>
-                I need help with
+        <p class="text-sm mt-2">
+            I need help with
+        </p>
+        <div class="flex flex-wrap gap-2 text-xs items-center">
+            <div class="inline-flex items-center gap-1">
+                <x-shared.checkbox id="need_help_with_kitchen" value="kitchen" wire:model="need_help_with" />
+                <label class="cursor-pointer" for="need_help_with_kitchen">Kitchen</label>
             </div>
-            <div class="flex flex-wrap gap-4">
-                <div class="flex gap-4">
-                    <div>
-                        <input type="checkbox" wire:model="kitchen">
-                        <label>Kitchen</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" wire:model="bathroom">
-                        <label>Bathroom</label>
-
-                    </div>
-                </div>
-                <div class="flex gap-4">
-                    <div>
-                        <input type="checkbox" wire:model="wardrobe">
-                        <label>Wardrobe</label>
-
-                    </div>
-                    <div>
-                        <input type="checkbox" wire:model="furniture">
-                        <label>Furnitures</label>
-
-                    </div>
-                </div>
+            <div class="inline-flex items-center gap-1">
+                <x-shared.checkbox id="need_help_with_bathroom" value="bathroom" wire:model="need_help_with" />
+                <label class="cursor-pointer" for="need_help_with_bathroom">Bathroom</label>
+            </div>
+            <div class="inline-flex items-center gap-1">
+                <x-shared.checkbox id="need_help_with_wardrobe" value="wardrobe" wire:model="need_help_with" />
+                <label class="cursor-pointer" for="need_help_with_wardrobe">Wardrobe</label>
+            </div>
+            <div class="inline-flex items-center gap-1">
+                <x-shared.checkbox id="need_help_with_furniture" value="furniture" wire:model="need_help_with" />
+                <label class="cursor-pointer" for="need_help_with_furniture">Furnitures</label>
             </div>
         </div>
+        <x-input-error for="need_help_with" class="mt-2" />
         <div class="mt-4">
-            <textarea id="how_can_help" wire:model="howCanHelp" placeholder="How can we help?"
-                class="w-full bg-[#FAFAFA] border-[#EAEAEA]"></textarea>
+            <x-shared.textarea id="message" wire:model="message" placeholder="How can we help?"></x-shared.textarea>
+            <x-input-error for="message" class="mt-2" />
         </div>
         <div class="flex justify-center">
-            <button type="submit" class="bg-[#EBC31F] text-xs font-bold px-6 py-4">GET
-                A QUICK CALL
-                BACK</button>
+            <x-shared.theme-button type="submit">
+                GET A QUICK CALL BACK
+            </x-shared.theme-button>
         </div>
     </form>
 </div>

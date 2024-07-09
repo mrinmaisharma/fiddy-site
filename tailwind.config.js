@@ -14,10 +14,11 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Arial','Helvetica', 'sans-serif', ...defaultTheme.fontFamily.sans],
+                sans: ['DM Sans','Arial','Helvetica', 'sans-serif', ...defaultTheme.fontFamily.sans],
             },
             colors: {
                 primary: "#ECC31F",
+                primary2: "#FAD337",
             }
         },
     },

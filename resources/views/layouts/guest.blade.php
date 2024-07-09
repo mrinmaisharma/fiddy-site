@@ -8,21 +8,16 @@
 
     <title>@yield('title') - Fiddy</title>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=Open Sans:300,400,600,700,800&display=swap" rel="stylesheet" />
-
-    <!-- Scripts -->
-    @vite(['resources/css/app.scss', 'resources/js/app.js'])
-
     <!-- Styles -->
+    @vite(['resources/css/app.scss'])
     @livewireStyles
     @stack('styles')
 </head>
-<body>
 
-    
-    <div class="font-sans text-gray-900 antialiased w-full h-full">
+<body class="font-sans">
+
+
+    <div class="text-gray-900 antialiased w-full h-full">
         @include('includes.guest.navigation')
         <main class="relative h-100 min-h-screen xl:px-0" style="overflow-x:hidden">
             {{ $slot }}
@@ -30,20 +25,24 @@
         @include('includes.guest.footer')
     </div>
 
-    
+
     @stack('modals')
 
     <div id="toaster"></div>
 
     <script type="text/javascript">
-        window.onload=setLightTheme;
+        window.onload = setLightTheme;
+
         function setLightTheme() {
             localStorage.theme = "light";
             document.documentElement.classList.remove("dark");
             document.documentElement.setAttribute("data-theme", "light");
         }
     </script>
+    <!-- Scripts -->
+    @vite(['resources/js/app.js'])
     @livewireScripts
     @stack('scripts')
 </body>
+
 </html>

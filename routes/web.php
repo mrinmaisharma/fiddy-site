@@ -13,27 +13,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::get('/', function () {
-//  return redirect("https://www.fiddy.in");
-//});
-Route::get('/', 'App\Http\Controllers\HomeController@home');
-Route::get('/price-estimator/kitchen', 'App\Http\Controllers\HomeController@kitchen_estimator');
-Route::get('/price-estimator/wardrobe', 'App\Http\Controllers\HomeController@wardrobe_estimator');
-Route::get('/price-estimator/interior', 'App\Http\Controllers\HomeController@interior_estimator');
-Route::get('/studio', 'App\Http\Controllers\HomeController@about_us');
-Route::get('/products', 'App\Http\Controllers\HomeController@products');
-Route::get('/career', 'App\Http\Controllers\HomeController@career');
-Route::get('/contact', 'App\Http\Controllers\HomeController@contact');
-Route::get('/jobs', 'App\Http\Controllers\HomeController@jobs');
-Route::get('/jobs/job-details', 'App\Http\Controllers\HomeController@job_details');
-Route::get('/manage-kitchen-submissions', 'App\Http\Controllers\HomeController@manage_kitchen_submissions');
-Route::get('/manage-wardrobe-submissions', 'App\Http\Controllers\HomeController@manage_wardrobe_submissions');
-Route::get('/manage-interior-submissions', 'App\Http\Controllers\HomeController@manage_interior_submissions');
-Route::get('/manage-products', 'App\Http\Controllers\ProductController@manageProducts');
+Route::get('/', [\App\Http\Controllers\HomeController::class, "home"])->name('home');
+Route::get('/price-estimator/kitchen', [\App\Http\Controllers\HomeController::class, "kitchen_estimator"]);
+Route::get('/price-estimator/wardrobe', [\App\Http\Controllers\HomeController::class, "wardrobe_estimator"]);
+Route::get('/price-estimator/interior', [\App\Http\Controllers\HomeController::class, "interior_estimator"]);
+Route::get('/studio', [\App\Http\Controllers\HomeController::class, "about_us"]);
+Route::get('/products', [\App\Http\Controllers\HomeController::class, "products"]);
+Route::get('/career', [\App\Http\Controllers\HomeController::class, "career"]);
+Route::get('/contact', [\App\Http\Controllers\HomeController::class, "contact"]);
+Route::get('/jobs', [\App\Http\Controllers\HomeController::class, "jobs"]);
+Route::get('/jobs/job-details', [\App\Http\Controllers\HomeController::class, "job_details"]);
+Route::get('/manage-kitchen-submissions', [\App\Http\Controllers\HomeController::class, "manage_kitchen_submissions"]);
+Route::get('/manage-wardrobe-submissions', [\App\Http\Controllers\HomeController::class, "manage_wardrobe_submissions"]);
+Route::get('/manage-interior-submissions', [\App\Http\Controllers\HomeController::class, "manage_interior_submissions"]);
+Route::get('/manage-products', [\App\Http\Controllers\ProductController::class, "manageProducts"]);
+
 Route::prefix('dashboard')
     ->group(function () {
-        Route::resource('products', 'App\Http\Controllers\ProductController');
+        Route::resource('products', \App\Http\Controllers\ProductController::class);
     });
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

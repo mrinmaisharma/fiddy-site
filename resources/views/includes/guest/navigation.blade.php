@@ -1,5 +1,5 @@
 <div class="bg-black md:block hidden">
-    <div class="max-w-screen-lg px-2 py-2 flex justify-between text-[0.7rem] text-white mx-auto">
+    <div class="max-w-screen-xl px-5 lg:px-20 py-2 flex justify-between text-[0.7rem] text-white mx-auto">
         <div class="flex gap-5">
             <span class="inline-flex gap-1 items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -28,8 +28,8 @@
     </div>
 </div>
 <nav x-data="{ mobile_menu: false }" class="bg-white border-gray-200 dark:bg-white h-16 md:h-auto shadow shadow-gray-700/10">
-    <div class="max-w-screen-lg flex flex-wrap items-center justify-between mx-auto px-4 py-1">
-        <a href="https://www.fiddy.in/" class="flex items-center space-x-3 rtl:space-x-reverse">
+    <div class="max-w-screen-xl px-5 lg:px-[4.6rem] flex flex-wrap items-center justify-between mx-auto py-1">
+        <a href="{{ route('home') }}" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="{{ asset('images/fiddy-logo-black.png') }}" class="h-14" alt="Fiddy Logo" />
         </a>
         <button @click="mobile_menu=!mobile_menu" data-collapse-toggle="navbar-default" type="button"
@@ -55,26 +55,40 @@
                 class="text-sm flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-white md:dark:bg-white dark:border-gray-700">
                 <li>
                     <a href="https://www.fiddy.in/"
-                        class="block py-2 px-3 t uppercase font-light hover:font-thin text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary/80 md:p-0 dark:text-black md:dark:hover:text-primary/80 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                        aria-current="page">Home</a>
-                </li>
-                <li>
-                    <a href="https://www.fiddy.in/studio/"
-                        class="block py-2 px-3 t uppercase font-light hover:font-thin text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary/80 md:p-0 dark:text-black md:dark:hover:text-primary/80 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+                        class="block py-2 px-3 t uppercase text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-600 md:p-0 dark:text-black md:dark:hover:text-yellow-600 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                        aria-current="page">
+                        Home
+                    </a>
                 </li>
                 <li>
                     <a href="https://www.fiddy.in/products/"
-                        class="block py-2 px-3 t uppercase font-light hover:font-thin text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary/80 md:p-0 dark:text-black md:dark:hover:text-primary/80 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Our
-                        Products</a>
+                        class="block py-2 px-3 t uppercase text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-600 md:p-0 dark:text-black md:dark:hover:text-yellow-600 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Our
+                        Our Products
+                    </a>
                 </li>
                 <li>
-                    <a href="https://www.fiddy.in/contact/"
-                        class="block py-2 px-3 t uppercase font-light hover:font-thin text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary/80 md:p-0 dark:text-black md:dark:hover:text-primary/80 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact
-                        Us</a>
+                    <a href="https://www.fiddy.in/products/"
+                        class="block py-2 px-3 t uppercase text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-600 md:p-0 dark:text-black md:dark:hover:text-yellow-600 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Our
+                        Price Estimator
+                    </a>
                 </li>
                 <li>
                     <a href="https://www.fiddy.in/career/"
-                        class="block py-2 px-3 t uppercase font-light hover:font-thin text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-primary/80 md:p-0 dark:text-black md:dark:hover:text-primary/80 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Career</a>
+                        class="block py-2 px-3 t uppercase text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-600 md:p-0 dark:text-black md:dark:hover:text-yellow-600 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                        Career
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.fiddy.in/studio/"
+                        class="block py-2 px-3 t uppercase text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-600 md:p-0 dark:text-black md:dark:hover:text-yellow-600 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                        About Us
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.fiddy.in/contact/"
+                        class="block py-2 px-3 t uppercase text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-600 md:p-0 dark:text-black md:dark:hover:text-yellow-600 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                        Contact Us
+                    </a>
                 </li>
             </ul>
         </div>

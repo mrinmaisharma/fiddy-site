@@ -45,7 +45,7 @@
                 <h2 class="font-bold sm:text-xl text-lg">
                     Want to Re-Design your home?
                 </h2>
-                <button class="bg-[#EBC31F] text-xs px-6 py-2 mt-4">Click Here</button>
+                <button class="bg-primary text-xs px-6 py-2 mt-4">Click Here</button>
             </div>
         </div>
         <div class="flex flex-col mt-12 w-full md:flex-row items-center justify-center">

@@ -59,7 +59,7 @@
                 @enderror
             </div>
 
-            <button class="mb-4 bg-[#EBC31F] w-24 py-2 px-2 text-sm text-white" type="submit">SUBMIT</button>
+            <button class="mb-4 bg-primary w-24 py-2 px-2 text-sm text-white" type="submit">SUBMIT</button>
         </div>
     </form>
 </div>

@@ -11,6 +11,7 @@
         "blade-ui-kit/blade-heroicons": "^2.3",
         "blade-ui-kit/blade-icons": "^1.6",
         "blade-ui-kit/blade-zondicons": "^1.5",
+        "codeat3/blade-iconpark": "^1.6",
         "codeat3/blade-microns": "^1.5",
         "doctrine/dbal": "^3.8",
         "guzzlehttp/guzzle": "^7.2",
@@ -21,7 +22,8 @@
         "livewire/livewire": "^3.0",
         "owenvoke/blade-fontawesome": "^2.6",
         "sven/artisan-view": "^3.6",
-        "symfony/string": "^7.0"
+        "symfony/string": "^7.0",
+        "troccoli/blade-health-icons": "^3.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
