@@ -1,5 +1,5 @@
 <footer class="bg-black text-white">
-    <div class="max-w-screen-lg px-2 py-10 grid sm:grid-cols-3 grid-cols-1 mx-auto gap-5">
+    <div class="max-w-screen-lg px-5 lg:px-2 py-10 grid sm:grid-cols-3 grid-cols-1 mx-auto gap-5">
         <div class="">
             <img class="h-14" src="{{ asset('images/fiddy-logo-white.png') }}" alt="Fiddy logo" />
         </div>
