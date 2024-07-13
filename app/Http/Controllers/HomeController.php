@@ -12,7 +12,7 @@ class HomeController extends Controller
     {
         // Fetch product images from the database
         // $products = Product::all();
-        
+
         // // Prepare an array to store image URLs
         // $images = [];
 
@@ -27,6 +27,10 @@ class HomeController extends Controller
     public function about_us()
     {
         return view('fiddy.about-us');
+    }
+    public function showPriceEstimator()
+    {
+        return view('fiddy.price-estimator');
     }
 
     public function home()

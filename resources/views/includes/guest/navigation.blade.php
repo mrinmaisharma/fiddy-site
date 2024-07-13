@@ -68,38 +68,38 @@
             <ul
                 class="text-sm flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-white md:dark:bg-white dark:border-gray-700">
                 <li>
-                    <a href="https://www.fiddy.in/"
+                    <a href="/"
                         class="block py-2 px-3 t uppercase text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-600 md:p-0 dark:text-black md:dark:hover:text-yellow-600 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                         aria-current="page">
                         Home
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.fiddy.in/products/"
+                    <a href="/products"
                         class="block py-2 px-3 t uppercase text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-600 md:p-0 dark:text-black md:dark:hover:text-yellow-600 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Our
                         Our Products
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.fiddy.in/products/"
+                    <a href="/price-estimator"
                         class="block py-2 px-3 t uppercase text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-600 md:p-0 dark:text-black md:dark:hover:text-yellow-600 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Our
                         Price Estimator
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.fiddy.in/career/"
+                    <a href="/career"
                         class="block py-2 px-3 t uppercase text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-600 md:p-0 dark:text-black md:dark:hover:text-yellow-600 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
                         Career
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.fiddy.in/studio/"
+                    <a href="/studio"
                         class="block py-2 px-3 t uppercase text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-600 md:p-0 dark:text-black md:dark:hover:text-yellow-600 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
                         About Us
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.fiddy.in/contact/"
+                    <a href="/contact"
                         class="block py-2 px-3 t uppercase text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-yellow-600 md:p-0 dark:text-black md:dark:hover:text-yellow-600 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
                         Contact Us
                     </a>

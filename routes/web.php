@@ -18,6 +18,7 @@ Route::get('/price-estimator/kitchen', [\App\Http\Controllers\HomeController::cl
 Route::get('/price-estimator/wardrobe', [\App\Http\Controllers\HomeController::class, "wardrobe_estimator"]);
 Route::get('/price-estimator/interior', [\App\Http\Controllers\HomeController::class, "interior_estimator"]);
 Route::get('/studio', [\App\Http\Controllers\HomeController::class, "about_us"]);
+Route::get('/price-estimator', [\App\Http\Controllers\HomeController::class, "showPriceEstimator"]);
 Route::get('/products', [\App\Http\Controllers\HomeController::class, "products"]);
 Route::get('/career', [\App\Http\Controllers\HomeController::class, "career"]);
 Route::get('/contact', [\App\Http\Controllers\HomeController::class, "contact"]);
