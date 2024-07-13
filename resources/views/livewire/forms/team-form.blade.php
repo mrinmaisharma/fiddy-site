@@ -43,7 +43,7 @@
             <label for="description">Describe yourself in 70 words</label>
             <textarea wire:model="description" id="description" name="description"
                 placeholder="Write something interesting about you"
-                class="resize-none border rounded-md mt-1 w-full p-2 h-32 border-[#EEEEEE]"></textarea>
+                class="resize-none border rounded-sm mt-1 w-full p-2 h-32 border-[#EEEEEE]"></textarea>
             @error('description')
                 <span>{{ $message }}</span>
             @enderror
